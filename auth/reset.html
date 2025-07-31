@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reset Password</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- ✅ Reset logic -->
+    <script defer type="module" src="../js/auth.js"></script>
+  </head>
+  <body>
+    <img src="../img/Logo.png" alt="Uni-Journals Logo" />
+    <div class="container">
+      <h2>Reset your password</h2>
+
+      <label>New Password</label>
+      <input type="password" id="newPassword" required />
+
+      <label>Confirm Password</label>
+      <input type="password" id="confirmPassword" required />
+
+      <button class="submit-btn" id="resetSubmit">Reset</button>
+    </div>
+  </body>
+</html>

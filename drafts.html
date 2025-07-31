@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Drafts - Uni-Journal</title>
+    <link rel="stylesheet" href="../frontend/css/dashboard.css" />
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <div class="content-area">
+        <header class="header">
+          <img src="../frontend/img/Logo.png" alt="Logo" />
+          <p class="date" id="dateTime">Loading...</p>
+        </header>
+
+        <div class="dashboard_body">
+          <aside class="sidebar">
+            <nav class="nav-links">
+              <ul>
+                <li>
+                  <a href="dashboard.html"><span>Home</span></a>
+                </li>
+                <li>
+                  <a href="drafts.html" class="active"><span>Drafts</span></a>
+                </li>
+              </ul>
+            </nav>
+          </aside>
+
+          <main class="main-content">
+            <h2>Your Drafts</h2>
+            <div id="draftContainer" class="posts feed"></div>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="../frontend/js/drafts.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verify Email</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <!-- SweetAlert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- ✅ JS API connection -->
+    <script defer type="module" src="../js/resend.js"></script>
+  </head>
+  <body>
+    <img src="../img/Logo.png" alt="Uni-Journals Logo" />
+    <div class="container">
+      <h2>Verify Email</h2>
+      <p style="margin-bottom: 20px">
+        We have sent a verification link to
+        <strong id="verifyEmail">your email</strong>.
+      </p>
+
+      <button class="submit-btn" onclick="window.location.href='verified.html'">
+        Continue
+      </button>
+      <p class="resend">
+        Didn’t receive any code? <a href="#" id="resendLink">Resend code.</a>
+      </p>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uni-Journal Dashboard</title>
+    <link rel="stylesheet" href="../frontend/css/dashboard.css" />
+    <!-- ✅ API-connected dashboard logic -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script type="module" src="../frontend/js/boot.js" defer></script>
+    <script type="module" src="../frontend/js/dashboard.js" defer></script>
+  </head>
+  <body>
+    <div class="dashboard-container">
+      <div class="content-area">
+        <!-- Header -->
+        <header class="header">
+          <img src="../frontend/img/Logo.png" alt="Logo" />
+          <input type="text" placeholder="Search" class="search-bar" />
+          <div class="profile-box">
+            <p class="date">Date: <span id="dateTime"></span></p>
+            <a href="profile.html">
+              <img
+                src="../frontend/img/profile.jpg"
+                class="user-avatar-sm"
+                alt="Avatar"
+              />
+            </a>
+          </div>
+        </header>
+
+        <div class="dashboard_body">
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <nav class="nav-links">
+              <ul>
+                <li class="list-item active">
+                  <a href="index.html">
+                    <img src="../frontend/img/home.svg" />
+                    <span>Home</span>
+                  </a>
+                </li>
+                <li class="list-item">
+                  <a href="search.html">
+                    <img src="../frontend/img/search.svg" />
+                    <span>Search</span>
+                  </a>
+                </li>
+                <li class="list-item">
+                  <a href="notifications.html">
+                    <img src="../frontend/img/notifications.svg" />
+                    <span>Notification</span>
+                  </a>
+                </li>
+                <li class="list-item">
+                  <a href="profile.html">
+                    <img src="../frontend/img/profile.svg" />
+                    <span>Profile</span>
+                  </a>
+                </li>
+                <li class="list-item">
+                  <a href="bookmarks.html">
+                    <img src="../frontend/img/bookmarks.svg" />
+                    <span>Bookmarks</span>
+                  </a>
+                </li>
+                <li class="list-item">
+                  <a href="drafts.html">
+                    <img src="../frontend/img/bookmarks.svg" />
+                    <span>Drafts</span>
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div class="nav-footer">
+              <button class="post-btn">Post</button>
+              <div class="user-info">
+                <a href="profile.html">
+                  <img
+                    src="../frontend/img/profile.jpg"
+                    class="user-avatar"
+                    alt="Profile"
+                  />
+                </a>
+                <div>
+                  <p class="user-name">RICH3S</p>
+                  <p class="user-email">riches13@trinityuni.edu</p>
+                </div>
+              </div>
+              <button class="logout-btn" id="logoutBtn">
+                <img src="../frontend/img/logout.svg" alt="Logout" class="edit-icon" />
+                Logout
+              </button>
+            </div>
+            </div>
+          </aside>
+
+          <!-- Post Modal -->
+          <div id="postModal" class="post-modal hidden">
+            <div class="post-modal-content">
+              <button class="close-modal">×</button>
+              <div class="post-header">
+                <img
+                  src="../frontend/img/profile.jpg"
+                  class="modal-avatar"
+                  alt="Avatar"
+                />
+                <input
+                  type="text"
+                  placeholder="Add Title"
+                  class="modal-title"
+                />
+              </div>
+              <textarea
+                placeholder="Type Something..."
+                class="modal-textarea"
+              ></textarea>
+              <div class="post-bottom">
+                <select class="modal-select">
+                  <option>Select Tag</option>
+                  <option>Education</option>
+                  <option>Life</option>
+                  <option>Academics</option>
+                  <option>Tech</option>
+                </select>
+                <div class="image-upload">
+                  <button class="add-image-btn">+ Add Image</button>
+                </div>
+              </div>
+              <button class="modal-post-btn">Post</button>
+            </div>
+          </div>
+
+          <!-- Main Content -->
+          <main class="main-content">
+            <section class="welcome-section">
+              <h2>Welcome, R1CH3S</h2>
+              <p>Register On Uni-Journal</p>
+
+              <div class="tabs">
+                <button class="tab active" data-tab="trending">Trending</button>
+                <button class="tab" data-tab="new">New</button>
+              </div>
+
+              <div id="postContainer" class="posts feed active">
+                <!-- Blog posts will be injected here -->
+              </div>
+            </section>
+          </main>
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional: Script to update time -->
+    <script>
+      const now = new Date();
+      document.getElementById("dateTime").textContent = now.toLocaleString();
+    </script>
+  </body>
+</html>
